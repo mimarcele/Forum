@@ -22,6 +22,7 @@ public class DetalhesTopicoDto {
     private String nomeAutor;
     private StatusTopico status;
 
+
     public DetalhesTopicoDto(Topico topico){
         this.id = topico.getId();
         this.titulo = topico.getTitulo();

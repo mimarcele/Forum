@@ -2,8 +2,8 @@ package com.alura.controller;
 
 import com.alura.dto.DetalhesTopicoDto;
 import com.alura.dto.TopicoDto;
-import com.alura.modelo.Topico;
 import com.alura.dto.TopicoFormDto;
+import com.alura.modelo.Topico;
 import com.alura.service.TopicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("alura")
+@RequestMapping("/alura")
 public class TopicoController {
 
     @Autowired

@@ -2,9 +2,9 @@ package com.alura.service;
 
 import com.alura.dto.DetalhesTopicoDto;
 import com.alura.dto.TopicoDto;
+import com.alura.dto.TopicoFormDto;
 import com.alura.exception.TopicoNotFoundException;
 import com.alura.modelo.Topico;
-import com.alura.dto.TopicoFormDto;
 import com.alura.repository.CursoRepository;
 import com.alura.repository.TopicoRepository;
 import org.springframework.beans.BeanUtils;
@@ -34,8 +34,7 @@ public class TopicoService {
     }
 
     public List<Topico> listar() {
-        List<Topico> topicos = topicoRepository.findAll();
-        return topicos;
+    return topicoRepository.findAll();
     }
 
     public DetalhesTopicoDto buscar(final Long id) {
@@ -53,7 +52,6 @@ public class TopicoService {
                     topicoRepository.save(topico);
                     return topico;
                 }).orElseThrow(() -> new TopicoNotFoundException("Tópico não encontrado, verifique o id"));
-
     }
 
     public void deletar(final Long id){

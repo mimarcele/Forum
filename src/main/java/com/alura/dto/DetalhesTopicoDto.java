@@ -1,15 +1,11 @@
 package com.alura.dto;
 
-import com.alura.modelo.Resposta;
 import com.alura.modelo.StatusTopico;
 import com.alura.modelo.Topico;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Data
 @AllArgsConstructor

@@ -2,7 +2,7 @@ package com.alura.service;
 
 import com.alura.dto.DetalhesTopicoDto;
 import com.alura.dto.TopicoDto;
-import com.alura.dto.TopicoFormDto;
+import com.alura.form.TopicoForm;
 import com.alura.exception.TopicoNotFoundException;
 import com.alura.modelo.Topico;
 import com.alura.repository.CursoRepository;
@@ -23,7 +23,7 @@ public class TopicoService {
     @Autowired
     private CursoRepository cursoRepository;
 
-    public Topico cadastrar(final TopicoFormDto form) {
+    public Topico cadastrar(final TopicoForm form) {
         Topico topico = new Topico();
         topico.setTitulo(form.getTitulo());
         topico.setMensagem(form.getMensagem());

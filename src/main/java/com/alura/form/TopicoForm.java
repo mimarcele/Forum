@@ -1,4 +1,4 @@
-package com.alura.dto;
+package com.alura.form;
 
 
 import lombok.AllArgsConstructor;
@@ -9,7 +9,7 @@ import javax.validation.constraints.NotEmpty;
 
 @Data
 @AllArgsConstructor
-public class TopicoFormDto {
+public class TopicoForm {
 
  @NotEmpty
  @javax.validation.constraints.NotNull

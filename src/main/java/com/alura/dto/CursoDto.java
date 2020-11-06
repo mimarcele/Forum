@@ -1,6 +1,5 @@
 package com.alura.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 

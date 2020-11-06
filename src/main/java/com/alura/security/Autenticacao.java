@@ -1,5 +1,6 @@
 package com.alura.security;
 
+
 import com.alura.modelo.Usuario;
 import com.alura.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 @Service
-public class AutenticacaoService implements UserDetailsService {
+public class Autenticacao implements UserDetailsService {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -19,6 +20,7 @@ public class AutenticacaoService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         Optional<Usuario> usuario = usuarioRepository.findByEmail(username);
+
         if(usuario.isPresent()){
             return usuario.get();
         }

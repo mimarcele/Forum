@@ -2,7 +2,7 @@ package com.alura.controller;
 
 import com.alura.dto.DetalhesTopicoDto;
 import com.alura.dto.TopicoDto;
-import com.alura.dto.TopicoFormDto;
+import com.alura.form.TopicoForm;
 import com.alura.modelo.Topico;
 import com.alura.service.TopicoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class TopicoController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Topico cadastrar(@RequestBody @Valid final TopicoFormDto form){
+    public Topico cadastrar(@RequestBody @Valid final TopicoForm form){
         Topico topico = topicoService.cadastrar(form);
         return topico;
     }

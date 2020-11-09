@@ -3,6 +3,7 @@ package com.alura.security;
 import com.alura.dto.TokenDto;
 import com.alura.form.LoginForm;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -10,10 +11,11 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile("prod")
 public class AutentService {
 
     @Autowired
-    private AuthenticationManager authenticationManager;
+   private AuthenticationManager authenticationManager;
 
     @Autowired
     private TokenService tokenService;

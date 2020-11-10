@@ -52,7 +52,7 @@ public class CursoService {
     public void deletar(final Long id){
         Optional<Curso> cursos = cursoRepository.findById(id);
         if(!cursos.isPresent()){
-            throw new CursoNotFoundException("Jogo não encontrado para id solicitado");
+            throw new CursoNotFoundException("Curso não encontrado para id solicitado");
         }
         cursoRepository.delete(cursos.get());
     }
